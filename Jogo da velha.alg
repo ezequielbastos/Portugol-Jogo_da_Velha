@@ -8,7 +8,7 @@ algoritmo "JogodaVelha"
 var
   v: vetor[1..3, 1..3] de Caractere
   L, C, Cont, Po: Inteiro
-  Simb : Caractere
+  Simb, Res: Caractere
   R: Logico
 Procedimento mostraVelha()
 Inicio
@@ -95,6 +95,8 @@ inicio
 FimFuncao
 
 inicio
+Repita
+   LimpaTela
    Cont <- 1
    Simb <- "X"
    Para L <- 1 ate 3 faca
@@ -117,5 +119,9 @@ inicio
       LimpaTela
       MostraVelha()
    Ate (terminouVelha() = verdadeiro)
+   Escreval("Desejá jogar novamente Sim(S)ou(N)Não")
+   leia(Res)
+Ate (Res = "N")
+   limpatela
    EscrevaL("JOGO FINALIZADO!!!")
 fimalgoritmo
